@@ -12,7 +12,7 @@ cp .env .env.local
 ### Modifier le fichier .env.local en fonction de votre environnement
 - `DATABASE_URL` : url de connexion à la base de données
 - `APP_ENV` : environnement de l'application
-- `PROJECT_NAME` : nom du projet ou du site web
+- `APP_NAME` : nom du projet ou du site web
 - `MAILER_DSN` : url de connexion au serveur de mail
 - `MESSENGER_TRANSPORT_DSN` : service de gestion des messages (ex: RabbitMQ)
 
