@@ -72,3 +72,21 @@ php bin/console d:f:l --group=prod
 [Documentation](https://symfony.com/doc/current/messenger.html#deploying-to-production)
 
 _Aller sur l'url de votre site_
+
+## Publication (depuis l'environnement de développement)
+
+## Lancer les tests
+```bash
+vendor/bin/phpcs
+vendor/bin/php-cs-fixer fix --diff --dry-run
+vendor/bin/phpcbf # facultative : to fix errors automatically
+vendor/bin/php-cs-fixer fix --diff # facultative : to fix errors automatically
+```
+
+## Git flow
+```bash
+git checkout -b feature/feature-name
+git add .
+git commit -m "message"
+git push origin feature/feature-name
+```
