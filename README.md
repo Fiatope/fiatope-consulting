@@ -79,8 +79,13 @@ _Aller sur l'url de votre site_
 ```bash
 vendor/bin/phpcs
 vendor/bin/php-cs-fixer fix --diff --dry-run
-vendor/bin/phpcbf # facultative : to fix errors automatically
-vendor/bin/php-cs-fixer fix --diff # facultative : to fix errors automatically
+vendor/bin/phpunit
+```
+
+## Fixer les erreurs potentielles
+```bash
+vendor/bin/php-cs-fixer fix --diff
+vendor/bin/phpcbf
 ```
 
 ## Git flow
