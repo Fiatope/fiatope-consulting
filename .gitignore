@@ -27,6 +27,7 @@ yarn-error.log
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache
 /phpcs.xml
+.php_cs.cache
 ###< squizlabs/php_codesniffer ###
 
 ###> friendsofphp/php-cs-fixer ###

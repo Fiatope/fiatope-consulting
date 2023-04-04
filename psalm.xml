@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="1"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    findUnusedBaselineEntry="true"
+    findUnusedCode="true"
+    errorBaseline="baseline.xml"
+>
+    <projectFiles>
+        <directory name="."/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="var"/>
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <UnusedClass>
+            <errorLevel type="suppress">
+                <directory name="src/Controller"/>
+            </errorLevel>
+        </UnusedClass>
+    </issueHandlers>
+
+    <plugins>
+        <pluginClass class="Lctrs\PsalmPsrContainerPlugin\Plugin"/>
+        <pluginClass class="Orklah\PsalmInsaneComparison\Plugin"/>
+        <pluginClass class="Orklah\NotEmpty\Plugin"/>
+        <pluginClass class="Orklah\StrictEquality\Plugin"/>
+        <pluginClass class="Orklah\PsalmStrictNumericCast\Plugin"/>
+        <pluginClass class="Psl\Psalm\Plugin"/>
+        <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
+        <pluginClass class="Psalm\SymfonyPsalmPlugin\Plugin"/>
+        <pluginClass class="Weirdan\DoctrinePsalmPlugin\Plugin"/>
+    </plugins>
+</psalm>

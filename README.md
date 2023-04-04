@@ -81,6 +81,7 @@ vendor/bin/phpcs
 vendor/bin/php-cs-fixer fix --diff --dry-run
 vendor/bin/phpunit
 vendor/bin/phpstan -vvv
+vendor/bin/psalm
 ```
 
 ## Corriger les erreurs potentielles
