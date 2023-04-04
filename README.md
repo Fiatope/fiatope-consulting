@@ -80,9 +80,10 @@ _Aller sur l'url de votre site_
 vendor/bin/phpcs
 vendor/bin/php-cs-fixer fix --diff --dry-run
 vendor/bin/phpunit
+vendor/bin/phpstan -vvv
 ```
 
-## Fixer les erreurs potentielles
+## Corriger les erreurs potentielles
 ```bash
 vendor/bin/php-cs-fixer fix --diff
 vendor/bin/phpcbf

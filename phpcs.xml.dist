@@ -7,13 +7,16 @@
     <arg name="cache" value=".phpcs-cache"/>
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
+    <arg name="extensions" value=""/>
+    <arg value="spvvv"/>
 
     <rule ref="PSR12"/>
 
-    <file>bin/</file>
-    <file>config/</file>
-    <file>public/</file>
-    <file>src/</file>
-    <file>tests/</file>
+    <file>.</file>
+
+    <exclude-pattern>vendor</exclude-pattern>
+    <exclude-pattern>node_modules</exclude-pattern>
+    <exclude-pattern>migrations</exclude-pattern>
+    <exclude-pattern>var</exclude-pattern>
 
 </ruleset>
