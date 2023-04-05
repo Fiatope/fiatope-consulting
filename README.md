@@ -97,3 +97,9 @@ git add .
 git commit -m "message"
 git push origin feature/feature-name
 ```
+
+## Maintenance
+```bash
+touch lock # maintenance mode on
+rm lock # maintenance mode off
+```

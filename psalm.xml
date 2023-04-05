@@ -21,6 +21,7 @@
         <UnusedClass>
             <errorLevel type="suppress">
                 <directory name="src/Controller"/>
+                <directory name="src/EventSubscriber"/>
             </errorLevel>
         </UnusedClass>
     </issueHandlers>
