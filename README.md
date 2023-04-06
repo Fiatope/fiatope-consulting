@@ -1,7 +1,6 @@
-# Nom du projet
+# Fiatope Consulting
 ## Description
-TODO:
-- [ ] ajouter une description du projet
+Site web de Fiatope Consulting
 
 ## Installation
 ### Le fichier .env
