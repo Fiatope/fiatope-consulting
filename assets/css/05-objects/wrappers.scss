@@ -42,3 +42,12 @@
         }
     }
 }
+
+%link-light {
+    @extend %link;
+
+    &::before {
+        background: rgba($white, 70%);
+    }
+
+}

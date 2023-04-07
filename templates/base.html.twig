@@ -17,8 +17,20 @@
             <header>
                 {% block header %}
                     <a href="{{ path('home') }}"><img src="{{ asset('assets/img/logo.svg') }}" alt="Logo de {{ app_name }}" class="logo" width="232" height="32"></a>
-                    <nav class="menu">
-                        <img src="{{ asset('assets/img/menu.svg') }}" alt="Menu burger" class="open-menu" />
+                    <nav class="menu" data-controller="menu">
+                        <a class="toggle-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </a>
+
+                        <ul>
+                            <li><a href="{{ path('home') }}">Accueil</a></li>
+                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                        </ul>
                     </nav>
                 {% endblock %}
             </header>

@@ -28,5 +28,12 @@
         .card-link {
             align-self: flex-end;
         }
+
+        &:nth-child(even) {
+            animation: floating 3s ease-in-out infinite reverse;
+        }
+        &:nth-child(odd) {
+            animation: floating 3s ease-in-out infinite;
+        }
     }
 }

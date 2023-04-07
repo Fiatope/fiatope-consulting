@@ -83,7 +83,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "test": [
+        "tests": [
             "vendor/bin/phpcs",
             "vendor/bin/php-cs-fixer fix --diff --dry-run",
             "vendor/bin/phpunit",

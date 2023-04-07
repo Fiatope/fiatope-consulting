@@ -8,12 +8,73 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    .open-menu, .close-menu {
-        cursor: pointer;
-        transition: .3s;
+    nav.menu {
+        background: transparent;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: 1s;
+        color: $white;
+        width: 0;
 
-        &:hover {
-            transform: scale(1.1);
+        .toggle-menu {
+            position: absolute;
+            top: ratio-space(3);
+            right: ratio-space(3);
+            transition: .3s;
+
+            .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: $primary-color;
+                margin: 5px 0;
+                transition: .3s;
+                border-radius: 3px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        ul {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
+
+            position: absolute;
+            top: 50px;
+            left: ratio-space(3);
+
+            li a {
+                @extend %link-light;
+            }
+        }
+
+        &.active {
+            width: 80%;
+            height: 100vh;
+            background: $primary-color;
+
+            .toggle-menu .bar {
+                background-color: $white;
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 5px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(45deg) translate(-6px, -6px);
+                }
+            }
+
+            ul {
+                width: auto;
+                height: auto;
+            }
         }
     }
 }
