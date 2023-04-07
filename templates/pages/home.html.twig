@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block page_name %}Accueil{% endblock %}
+
+{% block body_attr %}id="home"{% endblock %}
+
+{% block main %}
+    <section>
+        <div class="content">
+            <h1>{{ app_name }}</h1>
+            <p>
+                Structure de conseil international qui accompagne de multiples acteurs économiques sur des sujets d’entrepreneuriat, de finance digitale, de transformation digitale et d’innovation.
+            </p>
+            <a href="{{ path('home') }}" class="btn primary">Contactez-nous</a>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>Aires d'interventions</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="{{ asset('assets/img/aire-1.svg') }}" alt="" class="card-icon" width="64" height="64">
+                    <h3 class="card-title">Entrepreneuriat et financement</h3>
+                    <a href="" class="btn primary card-link">Voir plus</a>
+                </article>
+                <article class="card">
+                    <img src="{{ asset('assets/img/aire-2.svg') }}" alt="" class="card-icon" width="64" height="64">
+                    <h3 class="card-title">Entrepreneuriat et financement</h3>
+                    <a href="" class="btn primary card-link">Voir plus</a>
+                </article>
+                <article class="card">
+                    <img src="{{ asset('assets/img/aire-3.svg') }}" alt="" class="card-icon" width="64" height="64">
+                    <h3 class="card-title">Entrepreneuriat et financement</h3>
+                    <a href="" class="btn primary card-link">Voir plus</a>
+                </article>
+                <article class="card">
+                    <img src="{{ asset('assets/img/aire-4.svg') }}" alt="" class="card-icon" width="64" height="64">
+                    <h3 class="card-title">Entrepreneuriat et financement</h3>
+                    <a href="" class="btn primary card-link">Voir plus</a>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>Nos partenaires et clients</h2>
+            <div class="customers">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+                <img src="" alt="" class="customer" width="375" height="200">
+            </div>
+        </div>
+    </section>
+{% endblock %}

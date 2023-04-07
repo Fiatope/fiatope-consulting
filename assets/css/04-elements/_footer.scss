@@ -1,0 +1,68 @@
+footer {
+    h2 {
+        color: $primary-color;
+        margin-bottom: ratio-space(2);
+    }
+
+    address {
+        h2 {
+            text-transform: uppercase;
+        }
+        a {
+            @extend %link;
+        }
+    }
+
+    .grid {
+        padding:ratio-space(3);
+        @extend %grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'logo logo'
+        'address1 social'
+        'address2 links'
+    ;
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .address1 {
+            grid-area: address1;
+        }
+
+        .address2 {
+            grid-area: address2;
+        }
+
+        .social {
+            grid-area: social;
+
+            a {
+                display: inline-block;
+                transition: .3s;
+
+                i {
+                    font-size: 2rem;
+                    margin-right: ratio-space(2);
+                    color: $primary-color;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .links {
+            grid-area: links;
+        }
+    }
+
+    .copyright {
+        padding: ratio-space(2) ratio-space(3);
+        background: $primary-color;
+        color: $white;
+    }
+}

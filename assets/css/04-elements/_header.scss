@@ -1,0 +1,19 @@
+header {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    padding: ratio-space(3);
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .open-menu, .close-menu {
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

@@ -5,7 +5,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('assets/img/logo-min.svg') }}">
         <title>{% block title %}{{ app_name }} | {% block page_name %}{% endblock %}{% endblock %}</title>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -16,6 +16,10 @@
         {% block body %}
             <header>
                 {% block header %}
+                    <a href="{{ path('home') }}"><img src="{{ asset('assets/img/logo.svg') }}" alt="Logo de {{ app_name }}" class="logo" width="232" height="32"></a>
+                    <nav class="menu">
+                        <img src="{{ asset('assets/img/menu.svg') }}" alt="Menu burger" class="open-menu" />
+                    </nav>
                 {% endblock %}
             </header>
 
@@ -23,6 +27,53 @@
                 {% block main %}
                 {% endblock %}
             </main>
+
+            <footer>
+                <div class="grid">
+                    <img src="{{ asset('assets/img/logo-min.svg') }}" alt="Logo de {{ app_name }}" class="logo" width="124" height="124">
+                    <address class="address1">
+                        <h2>France</h2>
+                        <p>{{ app_name }}</p>
+                        <p>
+                            4517 Washington Ave. Manchester,
+                            <br/>Kentucky
+                            <br/>39495
+                        </p>
+                        <p>Numéro : <a href="tel:">(406) 555-0120</a></p>
+                        <p>E-mail : <a href="mailto:">jackson.graham@example.com</a></p>
+                    </address>
+                    <address class="address2">
+                        <h2>Cameroun</h2>
+                        <p>{{ app_name }}</p>
+                        <p>
+                            4517 Washington Ave. Manchester,
+                            <br/>Kentucky
+                            <br/>39495
+                        </p>
+                        <p>Numéro : <a href="tel:">(406) 555-0120</a></p>
+                        <p>E-mail : <a href="mailto:">jackson.graham@example.com</a></p>
+                    </address>
+                    <nav class="social">
+                        <h2>Réseaux sociaux</h2>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </nav>
+                    <nav class="links">
+                        <h2>Liens utiles</h2>
+                        <ul>
+                            <li><a href="{{ path('home') }}">Accueil</a></li>
+                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
+                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
+                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
+                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
+                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="copyright">
+                    © Copyright <strong>Fiatope Consulting</strong>. All Rights Reserved.
+                </p>
+            </footer>
         {% endblock %}
     </body>
 

@@ -1,0 +1,44 @@
+%flex {
+    display: flex;
+    gap: ratio-space(2);
+}
+
+%grid {
+    display: grid;
+    gap: ratio-space(3);
+}
+
+%margin {
+    margin: 0 ratio-space(3);
+}
+
+%padding {
+    padding: ratio-space(8) ratio-space(3);
+}
+
+%shadow {
+    box-shadow: 4px 4px 4px rgba($light-grey, 50%);
+}
+
+%link {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: rgba($primary-color, 75%);
+        transform: skew(22deg);
+        height: .5rem;
+        bottom: .2rem;
+        width: 0;
+        transition: .3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}

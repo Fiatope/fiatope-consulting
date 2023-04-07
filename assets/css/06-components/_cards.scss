@@ -1,0 +1,32 @@
+.cards {
+    @extend %flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: ratio-space(8);
+
+    .card {
+        width: cols(4);
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 300px;
+        @extend %shadow;
+        padding: ratio-space(3);
+        @extend %flex;
+        flex-direction: column;
+        gap: ratio-space(3);
+        border-radius: 3px;
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+        }
+
+        .card-title {
+            margin-bottom: ratio-space(8);
+        }
+
+        .card-link {
+            align-self: flex-end;
+        }
+    }
+}
