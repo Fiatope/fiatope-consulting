@@ -2,4 +2,12 @@
     @extend %flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: ratio-space(3);
+
+    .customer {
+        object-fit: contain;
+        width: cols(3);
+        min-width: 300px;
+        max-height: 200px;
+    }
 }

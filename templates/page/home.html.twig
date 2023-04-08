@@ -11,33 +11,20 @@
             <p>
                 Structure de conseil international qui accompagne de multiples acteurs économiques sur des sujets d’entrepreneuriat, de finance digitale, de transformation digitale et d’innovation.
             </p>
-            <a href="{{ path('home') }}" class="btn primary">Contactez-nous</a>
+            <a href="{{ path('contact') }}" class="btn primary">Contactez-nous</a>
         </div>
     </section>
     <section>
         <div class="content">
             <h2>Aires d'interventions</h2>
             <div class="cards">
-                <article class="card">
-                    <img src="{{ asset('assets/img/aire-1.svg') }}" alt="" class="card-icon" width="64" height="64">
-                    <h3 class="card-title">Entrepreneuriat et financement</h3>
-                    <a href="" class="btn primary card-link">Voir plus</a>
-                </article>
-                <article class="card">
-                    <img src="{{ asset('assets/img/aire-2.svg') }}" alt="" class="card-icon" width="64" height="64">
-                    <h3 class="card-title">Entrepreneuriat et financement</h3>
-                    <a href="" class="btn primary card-link">Voir plus</a>
-                </article>
-                <article class="card">
-                    <img src="{{ asset('assets/img/aire-3.svg') }}" alt="" class="card-icon" width="64" height="64">
-                    <h3 class="card-title">Entrepreneuriat et financement</h3>
-                    <a href="" class="btn primary card-link">Voir plus</a>
-                </article>
-                <article class="card">
-                    <img src="{{ asset('assets/img/aire-4.svg') }}" alt="" class="card-icon" width="64" height="64">
-                    <h3 class="card-title">Entrepreneuriat et financement</h3>
-                    <a href="" class="btn primary card-link">Voir plus</a>
-                </article>
+                {% for area in areas %}
+                    <article class="card">
+                        <img src="{{ asset('assets/img/aire-' ~ loop.index ~ '.svg') }}" alt="" class="card-icon" width="64" height="64">
+                        <h3 class="card-title">{{ area.name }}</h3>
+                        <a href="{{ path('business_area', {slug: area.slug}) }}" class="btn primary card-link">Voir plus</a>
+                    </article>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -45,18 +32,9 @@
         <div class="content">
             <h2>Nos partenaires et clients</h2>
             <div class="customers">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
-                <img src="" alt="" class="customer" width="375" height="200">
+                {% for customer in customers %}
+                    <img src="{{ asset('uploads/img/' ~ customer.logo) }}" alt="Client et partenaire de {{ app_name }}" class="customer" width="375" height="200">
+                {% endfor %}
             </div>
         </div>
     </section>
