@@ -11,6 +11,8 @@
         "doctrine/doctrine-bundle": "^2.9",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.14",
+        "easycorp/easyadmin-bundle": "^4.6",
+        "friendsofsymfony/ckeditor-bundle": "^2.4",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.16",
         "sensio/framework-extra-bundle": "^6.1",
@@ -43,7 +45,8 @@
         "symfony/webpack-encore-bundle": "^1.16",
         "symfony/yaml": "6.2.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "vich/uploader-bundle": "^2.1"
     },
     "config": {
         "allow-plugins": {
@@ -75,7 +78,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "ckeditor:install": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -83,12 +87,16 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "tests": [
+        "verify": [
             "vendor/bin/phpcs",
             "vendor/bin/php-cs-fixer fix --diff --dry-run",
-            "vendor/bin/phpunit",
             "vendor/bin/phpstan -vvv",
             "vendor/bin/psalm"
+        ],
+        "test": "vendor/bin/phpunit",
+        "fix": [
+            "vendor/bin/phpcbf",
+            "vendor/bin/php-cs-fixer fix --diff"
         ]
     },
     "conflict": {
@@ -96,11 +104,12 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
             "require": "6.2.*"
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "friendsofphp/php-cs-fixer": "^3.16",
         "lctrs/psalm-psr-container-plugin": "^1.9",
         "orklah/psalm-insane-comparison": "^2.2",

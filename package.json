@@ -8,6 +8,7 @@
         "@symfony/webpack-encore": "^4.0.0",
         "core-js": "^3.23.0",
         "eslint": "^8.37.0",
+        "file-loader": "6.0.0",
         "jest": "^29.5.0",
         "prettier": "^2.8.7",
         "regenerator-runtime": "^0.13.9",
@@ -27,5 +28,8 @@
         "verify": "prettier assets/**/*.{js,jsx} -c --ignore-unknown && eslint assets/**/*.{js,jsx}",
         "verify:fix": "prettier assets/**/*.{js,jsx} -w && eslint assets/**/*.{js,jsx} --fix",
         "test": "jest"
+    },
+    "dependencies": {
+        "ckeditor4": "4.13.0"
     }
 }
