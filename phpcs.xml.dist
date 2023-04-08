@@ -15,6 +15,6 @@
     <file>.</file>
 
     <exclude-pattern>vendor</exclude-pattern>
-    <exclude-pattern>migrations</exclude-pattern>
     <exclude-pattern>var</exclude-pattern>
+    <exclude-pattern>node_modules</exclude-pattern>
 </ruleset>
