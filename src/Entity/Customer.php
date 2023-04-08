@@ -92,7 +92,7 @@ class Customer
     {
         return $this->imageFile;
     }
-    
+
     public function setImageFile(?File $imageFile): Customer
     {
         $this->imageFile = $imageFile;

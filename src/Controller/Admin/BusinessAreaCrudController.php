@@ -48,5 +48,4 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->hideOnIndex()
         ;
     }
-
 }

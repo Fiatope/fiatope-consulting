@@ -38,5 +38,4 @@ class CustomerCrudController extends AbstractCrudController
             ->onlyOnForms()
         ;
     }
-
 }
