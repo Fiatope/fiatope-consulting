@@ -50,3 +50,8 @@
         background: rgba($white, 70%);
     }
 }
+
+%content-width {
+    max-width: 1200px;
+    margin: auto;
+}

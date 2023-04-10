@@ -32,10 +32,10 @@ class Customer
     private ?string $logo = null;
 
     /**
-     * @var string[]|null
+     * @var string[]
      */
     #[ORM\Column(type: Types::SIMPLE_ARRAY, nullable: true)]
-    private ?array $types = [];
+    private array $types = [];
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -82,9 +82,9 @@ class Customer
     }
 
     /**
-     * @return string[]|null
+     * @return string[]
      */
-    public function getTypes(): ?array
+    public function getTypes(): array
     {
         return $this->types;
     }

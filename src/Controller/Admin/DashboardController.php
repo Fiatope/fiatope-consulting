@@ -28,15 +28,26 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle($this->app_name);
+            ->setTitle($this->app_name)
+            ->setFaviconPath('assets/img/logo-min.svg')
+        ;
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToRoute('Revenir au site', 'fa fa-home', 'home');
 
-        yield MenuItem::linkToCrud('Aires d\'interventions', 'fas fa-list', BusinessArea::class);
-        yield MenuItem::linkToCrud('Clients', 'fas fa-list', Customer::class);
+        yield MenuItem::section('Gestion du contenu');
+        yield MenuItem::linkToCrud('Aires d\'interventions', 'fas fa-network-wired', BusinessArea::class);
+        yield MenuItem::linkToCrud('Clients et Partenaires', 'fas fa-handshake-simple', Customer::class);
+
+        yield MenuItem::section('Messages');
         //        yield MenuItem::linkToCrud('The Label', 'fas fa-list', Message::class);
+
+        yield MenuItem::section('CMS');
+        // admins
+        // adresses
+        // social
+
     }
 }

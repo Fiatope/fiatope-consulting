@@ -43,6 +43,7 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->setUploadedFileNamePattern('[slug]-[uuid].[extension]')
             ->hideOnForm()
         ;
+
         yield TextareaField::new('description')
             ->setFormType(CKEditorType::class)
             ->hideOnIndex()

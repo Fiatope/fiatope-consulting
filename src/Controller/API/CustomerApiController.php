@@ -15,7 +15,7 @@ class CustomerApiController extends AbstractController
     {
     }
 
-    #[Route('/', name: 'api_customer_all')]
+    #[Route('/all', name: 'api_customer_all')]
     public function getAll(Request $request): Response
     {
         $types = $request->query->get('types');

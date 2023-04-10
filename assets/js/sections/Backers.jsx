@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 const Backers = () => {
     const [customers, setCustomers] = useState([])
     useEffect(() => {
-        fetch('api/customer/?types=backer')
+        fetch('api/customer/all?types=backer')
             .then(res => res.json())
             .then(data => {
                 setCustomers(data)

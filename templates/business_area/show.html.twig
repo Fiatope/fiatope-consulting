@@ -16,9 +16,11 @@
     </section>
 
     <section class='area-section'>
-        <hgroup class="content" style="background-image: url({{ asset('assets/img/area-section-1.jpg') }})">
-            <h2>Soutenir les bailleurs de fonds</h2>
-            <p>Lörem ipsum titågon tissa hexaponde, mäjär, radioaktiv. Difyssade ol, dektiga lyvis: intramädiliga. Nepora planebelt: anamäst jobbtorg jydenera. Behaligt dons tång, att mikrossa. Mät fukövis, har normcore. </p>
+        <hgroup style="background-image: url({{ asset('assets/img/area-section-1.jpg') }})">
+            <div class='content'>
+                <h2>Soutenir les bailleurs de fonds</h2>
+                <p>Lörem ipsum titågon tissa hexaponde, mäjär, radioaktiv. Difyssade ol, dektiga lyvis: intramädiliga. Nepora planebelt: anamäst jobbtorg jydenera. Behaligt dons tång, att mikrossa. Mät fukövis, har normcore. </p>
+            </div>
         </hgroup>
         {% for component in ['backers'] %}
             <article class='content' data-component='{{ component }}'></article>

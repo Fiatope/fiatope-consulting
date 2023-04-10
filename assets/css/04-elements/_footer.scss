@@ -14,8 +14,9 @@ footer {
     }
 
     .grid {
-        padding:ratio-space(3);
         @extend %grid;
+        @extend %content-width;
+        padding:ratio-space(3);
 
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:

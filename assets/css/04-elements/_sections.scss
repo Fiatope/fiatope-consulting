@@ -1,8 +1,7 @@
 section {
     .content {
         @extend %padding;
-        max-width: 1200px;
-        margin: auto;
+        @extend %content-width;
     }
 
     h2 {
