@@ -22,7 +22,9 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface
                 <br/>Intervenir dans des cursus de formation de niveau Master sur les sujets d’entrepreneuriat et de
                 financement de projets.'
             )
-            ->setImage('entrepreneuriat-et-financement.svg');
+            ->setImage('entrepreneuriat-et-financement.svg')
+            ->setFaIcon('fa-solid fa-building-columns')
+        ;
 
         $area2 = (new BusinessArea())
             ->setName('Transformation digitale')
@@ -32,7 +34,9 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface
                 vers le digital et conduire pour eux des projets digitaux.
                 <br/>Intervenir dans des cursus de niveau Master sur les sujets de transformation digitale et agile.'
             )
-            ->setImage('transformation-digitale.svg');
+            ->setImage('transformation-digitale.svg')
+            ->setFaIcon('fa-solid fa-laptop-file')
+        ;
 
         $area3 = (new BusinessArea())
             ->setName('Opérateurs mobiles')
@@ -42,7 +46,9 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface
                 d\'innovation. Sur le paiementdigital, la transformation digitale et la construction de hubs
                 d’innovation.'
             )
-            ->setImage('operateurs-mobiles.svg');
+            ->setImage('operateurs-mobiles.svg')
+            ->setFaIcon('fa-solid fa-mobile-screen-button')
+        ;
 
         $area4 = (new BusinessArea())
             ->setName('Performance en entreprise')
@@ -57,7 +63,9 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface
                     <li>Préparation au recrutement</li>
                 </ul>'
             )
-            ->setImage('performance-en-entreprise.svg');
+            ->setImage('performance-en-entreprise.svg')
+            ->setFaIcon('fa-solid fa-chart-pie')
+        ;
 
         $manager->persist($area1);
         $manager->persist($area2);

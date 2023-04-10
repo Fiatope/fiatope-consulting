@@ -21,4 +21,52 @@ main#area {
             width: cols(7);
         }
     }
+
+    section.area-section {
+        hgroup {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: $white;
+
+            h2 {
+                text-align: left;
+            }
+        }
+
+        article {
+            h3, h4, h5 {
+                text-align: center;
+                margin-bottom: ratio-space(8);
+            }
+
+            .area-section_customers {
+                @extend %flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: ratio-space(8);
+
+                .customer {
+                    width: 300px;
+
+                    img {
+                        display: inline-block;
+                        object-fit: contain;
+                        width: 300px;
+                        height: 150px;
+                    }
+
+                    .country {
+                        margin: ratio-space(2) 0;
+                        text-align: center;
+                        font-weight: 700;
+                    }
+
+                    .description {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
 }

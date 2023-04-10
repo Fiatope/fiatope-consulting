@@ -18,7 +18,9 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 financée par la GIZ'
             )
             ->setLogo('GIZ.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('GIZ')
+        ;
 
         $customer2 = (new Customer())
             ->setCountry('Rwanda')
@@ -27,7 +29,9 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 relation avec la France'
             )
             ->setLogo('ambassade-rwanda.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('Ambassade de France au Rwanda')
+        ;
 
         $customer3 = (new Customer())
             ->setCountry('Mali')
@@ -35,7 +39,9 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 'Renforcer les capacités des entrepreneurs, incubateurs et pouvoirs publics en financement participatif'
             )
             ->setLogo('banque-mondiale.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('Banque Mondiale')
+        ;
 
         $customer4 = (new Customer())
             ->setCountry('Afrique')
@@ -44,7 +50,9 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                  activité entrepreneuriale de financement projets'
             )
             ->setLogo('AFD.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('AFD')
+        ;
 
         $customer5 = (new Customer())
             ->setCountry('Cameroun')
@@ -53,7 +61,9 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 son financement'
             )
             ->setLogo('FORIM.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('FORIM')
+        ;
 
         $customer6 = (new Customer())
             ->setCountry('Bénin')
@@ -62,25 +72,33 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 financement participatif pour les filières agricoles'
             )
             ->setLogo('enabel.png')
-            ->setTypes(['backer']);
+            ->setTypes(['backer'])
+            ->setName('Enabel')
+        ;
 
         $customer7 = (new Customer())
             ->setCountry('Rwanda')
             ->setDescription('Sensibilisation de l’équipe dirigeante sur les enjeux de la mise en place de POS online')
             ->setLogo('access-bank.png')
-            ->setTypes(['digital']);
+            ->setTypes(['digital'])
+            ->setName('Access Bank')
+        ;
 
         $customer8 = (new Customer())
             ->setCountry('Cameroun')
             ->setDescription('Mise en place d’une direction des systèmes d’information pour l’Université')
             ->setLogo('universite-montagnes.png')
-            ->setTypes(['college', 'digital']);
+            ->setTypes(['college', 'digital'])
+            ->setName('Université des Montagnes')
+        ;
 
         $customer9 = (new Customer())
             ->setCountry('Côte d’Ivoire')
             ->setDescription('Offre de maitrise d’œuvre dans le cadre d’un appel d’offre')
             ->setLogo('HEMISPHERE.png')
-            ->setTypes(['digital']);
+            ->setTypes(['digital'])
+            ->setName('Hemisphere')
+        ;
 
         $customer10 = (new Customer())
             ->setCountry('Cameroun, RDC')
@@ -89,19 +107,25 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
                 d’innovation'
             )
             ->setLogo('orange.png')
-            ->setTypes(['mobile']);
+            ->setTypes(['mobile'])
+            ->setName('Orange')
+        ;
 
         $customer11 = (new Customer())
             ->setCountry('Rwanda')
             ->setDescription('Finance digitale')
             ->setLogo('cmu-africa.png')
-            ->setTypes(['college']);
+            ->setTypes(['college'])
+            ->setName('CMU Africa')
+        ;
 
         $customer12 = (new Customer())
             ->setCountry('France')
             ->setDescription('Entrepreneuriat\nFinancement d’entreprise\nFinance digitale')
             ->setLogo('uca.png')
-            ->setTypes(['college']);
+            ->setTypes(['college'])
+            ->setName('Université Clermont Auvergne')
+        ;
 
         $manager->persist($customer1);
         $manager->persist($customer2);

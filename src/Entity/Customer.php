@@ -37,6 +37,9 @@ class Customer
     #[ORM\Column(type: Types::SIMPLE_ARRAY, nullable: true)]
     private ?array $types = [];
 
+    #[ORM\Column(length: 255)]
+    private ?string $name = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Customer
     public function setImageFile(?File $imageFile): self
     {
         $this->imageFile = $imageFile;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }

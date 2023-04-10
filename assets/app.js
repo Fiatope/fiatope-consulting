@@ -3,3 +3,6 @@ import './css/style.scss'
 
 // start the Stimulus application
 import './bootstrap'
+
+// start the application
+import './js/index.js'

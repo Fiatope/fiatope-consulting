@@ -15,10 +15,8 @@
         <severity>0</severity>
     </rule>
 
-    <file>.</file>
-
-    <exclude-pattern>migrations</exclude-pattern>
-    <exclude-pattern>vendor</exclude-pattern>
-    <exclude-pattern>var</exclude-pattern>
-    <exclude-pattern>node_modules</exclude-pattern>
+    <file>public/</file>
+    <file>src/</file>
+    <file>tests/</file>
+    <file>translations/</file>
 </ruleset>

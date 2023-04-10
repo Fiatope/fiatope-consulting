@@ -17,8 +17,9 @@
         border-radius: 3px;
 
         .card-icon {
-            width: 64px;
-            height: 64px;
+            font-size: 64px;
+            margin-bottom: ratio-space(3);
+            color: $primary-color;
         }
 
         .card-title {

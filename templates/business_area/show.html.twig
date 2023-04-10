@@ -1,7 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BusinessAreaController!{% endblock %}
+{% block page_name %}{{ area.name }}{% endblock %}
 
-{% block body %}
+{% block main_attr %}id="area"{% endblock %}
 
+{% block main %}
+    <section>
+        <div class='content'>
+            <h1>{{ area.name }}</h1>
+            <div class='content_body'>
+                <p>{{ area.description | raw }}</p>
+                <img src='{{ asset('uploads/img/' ~ area.image) }}' alt='{{ area.name }}' width='800' height='480'>
+            </div>
+        </div>
+    </section>
+
+    <section class='area-section'>
+        <hgroup class="content" style="background-image: url({{ asset('assets/img/area-section-1.jpg') }})">
+            <h2>Soutenir les bailleurs de fonds</h2>
+            <p>Lörem ipsum titågon tissa hexaponde, mäjär, radioaktiv. Difyssade ol, dektiga lyvis: intramädiliga. Nepora planebelt: anamäst jobbtorg jydenera. Behaligt dons tång, att mikrossa. Mät fukövis, har normcore. </p>
+        </hgroup>
+        {% for component in ['backers'] %}
+            <article class='content' data-component='{{ component }}'></article>
+        {% endfor %}
+    </section>
 {% endblock %}

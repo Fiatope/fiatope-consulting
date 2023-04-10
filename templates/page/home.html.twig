@@ -20,7 +20,7 @@
             <div class="cards">
                 {% for area in areas %}
                     <article class="card">
-                        <img src="{{ asset('assets/img/aire-' ~ loop.index ~ '.svg') }}" alt="" class="card-icon" width="64" height="64">
+                        <i class="{{ area.faIcon }} card-icon"></i>
                         <h3 class="card-title">{{ area.name }}</h3>
                         <a href="{{ path('business_area', {slug: area.slug}) }}" class="btn primary card-link">Voir plus</a>
                     </article>
@@ -33,7 +33,7 @@
             <h2>Nos partenaires et clients</h2>
             <div class="customers">
                 {% for customer in customers %}
-                    <img src="{{ asset('uploads/img/' ~ customer.logo) }}" alt="Client et partenaire de {{ app_name }}" class="customer" width="375" height="200">
+                    <img src="{{ asset('uploads/img/' ~ customer.logo) }}" alt="{{ customer.name }}" class="customer" width="375" height="200">
                 {% endfor %}
             </div>
         </div>

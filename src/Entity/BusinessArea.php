@@ -36,6 +36,9 @@ class BusinessArea
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $fa_icon = null;
+
     public function getImageFile(): ?File
     {
         return $this->imageFile;
@@ -97,6 +100,18 @@ class BusinessArea
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getFaIcon(): ?string
+    {
+        return $this->fa_icon;
+    }
+
+    public function setFaIcon(string $fa_icon): self
+    {
+        $this->fa_icon = $fa_icon;
 
         return $this;
     }
