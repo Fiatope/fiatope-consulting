@@ -1,5 +1,14 @@
 {
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react",
+        "react-hooks",
+        "jsx-yara11y",
+        "jest"
+    ],
     "env": {
         "browser": true,
         "es2022": true,
@@ -14,7 +23,8 @@
         }
     },
     "rules": {
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "react/no-unescaped-entities": "off"
     },
     "ignorePatterns": ["*.json"]
 }

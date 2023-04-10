@@ -6,19 +6,20 @@ body#home {
     section:first-of-type {
         background: url('../../img/hero.jpg') no-repeat center center fixed;
         background-size: cover;
-        height: 80vh;
+        min-height: 80vh;
         width: 100%;
         color: $white;
         padding: cols(1);
+        @extend %flex;
+        align-items: center;
 
         .content {
-            @extend %flex;
-            gap: ratio-space(4);
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
             max-width: 600px;
             margin: 0;
+
+            p {
+                margin: ratio-space(4) 0;
+            }
         }
     }
 }

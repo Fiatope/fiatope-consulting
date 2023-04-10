@@ -32,10 +32,15 @@ class BusinessAreaSectionCrudController extends AbstractCrudController
     {
         yield TextField::new('name');
         yield TextareaField::new('description');
-        yield ChoiceField::new('components')
-            ->allowMultipleChoices()
+        yield ChoiceField::new('component')
             ->setChoices([
                 'Bailleurs de fonds' => 'backers',
+                'Coaching d\entreprises' => 'coaching',
+                'Interventions académiques' => 'academic',
+                'Conseils en transformation digital' => 'digital-advices',
+                'Conseils aux opérateurs mobile' => 'mobile-advices',
+                'Programmes digital' => 'digital-programs',
+                'Programmes d\'accélération' => 'programs'
             ])
         ;
         yield ImageField::new('image')

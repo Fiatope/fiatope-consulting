@@ -23,9 +23,7 @@
                     <p>{{ section.description }}</p>
                 </div>
             </hgroup>
-            {% for component in section.components %}
-                <article class='content' data-component='{{ component }}'></article>
-            {% endfor %}
+            <article class='content' data-component='{{ section.component }}'></article>
         </section>
     {% endfor %}
 {% endblock %}

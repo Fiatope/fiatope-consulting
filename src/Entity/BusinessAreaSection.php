@@ -26,11 +26,8 @@ class BusinessAreaSection
     #[ORM\Column(length: 500, nullable: true)]
     private ?string $description = null;
 
-    /**
-     * @var string[]
-     */
-    #[ORM\Column(type: Types::SIMPLE_ARRAY, nullable: true)]
-    private array $components = [];
+    #[ORM\Column(length: 60, nullable: true)]
+    private ?string $component = null;
 
     #[Assert\File(mimeTypes: ['image/jpeg', 'image/png'])]
     #[Vich\UploadableField(mapping: 'img', fileNameProperty: 'image')]
@@ -76,14 +73,14 @@ class BusinessAreaSection
         return $this;
     }
 
-    public function getComponents(): array
+    public function getComponent(): ?string
     {
-        return $this->components;
+        return $this->component;
     }
 
-    public function setComponents(?array $components): self
+    public function setComponent(?string $component): self
     {
-        $this->components = $components;
+        $this->component = $component;
 
         return $this;
     }
