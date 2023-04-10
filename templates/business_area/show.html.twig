@@ -15,15 +15,17 @@
         </div>
     </section>
 
-    <section class='area-section'>
-        <hgroup style="background-image: url({{ asset('assets/img/area-section-1.jpg') }})">
-            <div class='content'>
-                <h2>Soutenir les bailleurs de fonds</h2>
-                <p>Lörem ipsum titågon tissa hexaponde, mäjär, radioaktiv. Difyssade ol, dektiga lyvis: intramädiliga. Nepora planebelt: anamäst jobbtorg jydenera. Behaligt dons tång, att mikrossa. Mät fukövis, har normcore. </p>
-            </div>
-        </hgroup>
-        {% for component in ['backers'] %}
-            <article class='content' data-component='{{ component }}'></article>
-        {% endfor %}
-    </section>
+    {% for section in area.sections %}
+        <section class='area-section'>
+            <hgroup style="background-image: url({{ asset('uploads/img/' ~ section.image) }})">
+                <div class='content'>
+                    <h2>{{ section.name }}</h2>
+                    <p>{{ section.description }}</p>
+                </div>
+            </hgroup>
+            {% for component in section.components %}
+                <article class='content' data-component='{{ component }}'></article>
+            {% endfor %}
+        </section>
+    {% endfor %}
 {% endblock %}

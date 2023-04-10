@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\BusinessArea;
+use App\Entity\BusinessAreaSection;
 use App\Entity\Customer;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -39,6 +40,7 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::section('Gestion du contenu');
         yield MenuItem::linkToCrud('Aires d\'interventions', 'fas fa-network-wired', BusinessArea::class);
+        yield MenuItem::linkToCrud('Sections', 'fas fa-puzzle-piece', BusinessAreaSection::class);
         yield MenuItem::linkToCrud('Clients et Partenaires', 'fas fa-handshake-simple', Customer::class);
 
         yield MenuItem::section('Messages');

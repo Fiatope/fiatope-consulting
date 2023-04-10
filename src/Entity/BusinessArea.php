@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BusinessAreaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -38,6 +40,14 @@ class BusinessArea
 
     #[ORM\Column(length: 255)]
     private ?string $fa_icon = null;
+
+    #[ORM\ManyToMany(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
+    private Collection $sections;
+
+    public function __construct()
+    {
+        $this->sections = new ArrayCollection();
+    }
 
     public function getImageFile(): ?File
     {
@@ -112,6 +122,30 @@ class BusinessArea
     public function setFaIcon(string $fa_icon): self
     {
         $this->fa_icon = $fa_icon;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, BusinessAreaSection>
+     */
+    public function getSections(): Collection
+    {
+        return $this->sections;
+    }
+
+    public function addSection(BusinessAreaSection $section): self
+    {
+        if (!$this->sections->contains($section)) {
+            $this->sections->add($section);
+        }
+
+        return $this;
+    }
+
+    public function removeSection(BusinessAreaSection $section): self
+    {
+        $this->sections->removeElement($section);
 
         return $this;
     }

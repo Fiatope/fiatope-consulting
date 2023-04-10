@@ -40,7 +40,8 @@ class CustomerCrudController extends AbstractCrudController
                 'Bailleur de fonds' => 'backer',
                 'Opérateur mobile' => 'mobile',
                 'Transformation digitale' => 'digital'
-            ]);
+            ])
+        ;
         yield ImageField::new('logo')
             ->setBasePath('/uploads/img')
             ->setUploadedFileNamePattern('[slug]-[uuid].[extension]')
