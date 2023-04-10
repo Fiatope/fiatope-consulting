@@ -1,7 +1,6 @@
 header {
     height: 80px;
     width: 100%;
-    position: absolute;
     z-index: 1;
     padding: ratio-space(3);
     @extend %flex;
@@ -43,10 +42,10 @@ header {
             height: 0;
             overflow: hidden;
             transition: .3s;
-
-            position: absolute;
+            position: relative;
             top: 50px;
             left: ratio-space(3);
+            margin-bottom: ratio-space(2);
 
             li a {
                 @extend %link-light;

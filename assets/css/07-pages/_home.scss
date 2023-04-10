@@ -1,4 +1,8 @@
 body#home {
+    header {
+        position: absolute;
+    }
+
     section:first-of-type {
         background: url('../../img/hero.jpg') no-repeat center center fixed;
         background-size: cover;

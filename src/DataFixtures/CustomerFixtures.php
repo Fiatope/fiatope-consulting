@@ -13,37 +13,54 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
     {
         $customer1 = (new Customer())
             ->setCountry('Rwanda')
-            ->setDescription('Mise en place d’une plateforme de paiement des frais de scolarité pour une école de développement web financée par la GIZ')
+            ->setDescription(
+                'Mise en place d’une plateforme de paiement des frais de scolarité pour une école de développement web
+                financée par la GIZ'
+            )
             ->setLogo('GIZ.png')
             ->setTypes(['backer']);
 
         $customer2 = (new Customer())
             ->setCountry('Rwanda')
-            ->setDescription('Identifier les axes de renforcement de capacité de l’écosystème TECH dans le cadre du réchauffement des relation avec la France')
+            ->setDescription(
+                'Identifier les axes de renforcement de capacité de l’écosystème TECH dans le cadre du réchauffement des
+                relation avec la France'
+            )
             ->setLogo('ambassade-rwanda.png')
             ->setTypes(['backer']);
 
         $customer3 = (new Customer())
             ->setCountry('Mali')
-            ->setDescription('Renforcer les capacités des entrepreneurs, incubateurs et pouvoirs publics en financement participatif')
+            ->setDescription(
+                'Renforcer les capacités des entrepreneurs, incubateurs et pouvoirs publics en financement participatif'
+            )
             ->setLogo('banque-mondiale.png')
             ->setTypes(['backer']);
 
         $customer4 = (new Customer())
             ->setCountry('Afrique')
-            ->setDescription('Partage d’expérience avec les lauréats du Social and Inclusive Business Camp sur la mise en place d’une activité entrepreneuriale de financement projets')
+            ->setDescription(
+                'Partage d’expérience avec les lauréats du Social and Inclusive Business Camp sur la mise en place d’une
+                 activité entrepreneuriale de financement projets'
+            )
             ->setLogo('AFD.png')
             ->setTypes(['backer']);
 
         $customer5 = (new Customer())
             ->setCountry('Cameroun')
-            ->setDescription('Accompagner 20 jeunes camerounais en situation de handicap à l’entrepreneuriat, sa digitalisation et son financement')
+            ->setDescription(
+                'Accompagner 20 jeunes camerounais en situation de handicap à l’entrepreneuriat, sa digitalisation et
+                son financement'
+            )
             ->setLogo('FORIM.png')
             ->setTypes(['backer']);
 
         $customer6 = (new Customer())
             ->setCountry('Bénin')
-            ->setDescription('Accompagner une jeune entreprise dans la mise en place d’un écosystème et d’une plateforme de financement participatif pour les filières agricoles')
+            ->setDescription(
+                'Accompagner une jeune entreprise dans la mise en place d’un écosystème et d’une plateforme de
+                financement participatif pour les filières agricoles'
+            )
             ->setLogo('enabel.png')
             ->setTypes(['backer']);
 
@@ -67,7 +84,10 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
 
         $customer10 = (new Customer())
             ->setCountry('Cameroun, RDC')
-            ->setDescription('Accompagnement de mise en œuvre avec les directions Marketing et Technique de la stratégie d’innovation')
+            ->setDescription(
+                'Accompagnement de mise en œuvre avec les directions Marketing et Technique de la stratégie
+                d’innovation'
+            )
             ->setLogo('orange.png')
             ->setTypes(['mobile']);
 
@@ -79,9 +99,7 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
 
         $customer12 = (new Customer())
             ->setCountry('France')
-            ->setDescription('Entrepreneuriat\n
-Financement d’entreprise\n
-Finance digitale')
+            ->setDescription('Entrepreneuriat\nFinancement d’entreprise\nFinance digitale')
             ->setLogo('uca.png')
             ->setTypes(['college']);
 

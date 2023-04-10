@@ -26,10 +26,12 @@
 
                         <ul>
                             <li><a href="{{ path('home') }}">Accueil</a></li>
-                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
-                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
-                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
-                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                            <li><a href="{{ path('contact') }}">Nous contacter</a></li>
+                        </ul>
+                        <ul>
+                            {% for area in areas %}
+                                <li><a href="{{ path('business_area', {slug: area.slug}) }}">{{ area.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 {% endblock %}
@@ -74,11 +76,10 @@
                         <h2>Liens utiles</h2>
                         <ul>
                             <li><a href="{{ path('home') }}">Accueil</a></li>
-                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
-                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
-                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
-                            <li><a href="{{ path('home') }}">Aire d'intervention 1</a></li>
-                            <li><a href="{{ path('home') }}">Nous contacter</a></li>
+                            <li><a href="{{ path('contact') }}">Nous contacter</a></li>
+                            {% for area in areas %}
+                                <li><a href="{{ path('business_area', {slug: area.slug}) }}">{{ area.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 </div>

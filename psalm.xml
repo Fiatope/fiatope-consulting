@@ -15,6 +15,7 @@
             <directory name="vendor"/>
             <directory name="var"/>
             <directory name="node_modules"/>
+            <directory name="migrations"/>
         </ignoreFiles>
     </projectFiles>
 
@@ -23,8 +24,20 @@
             <errorLevel type="suppress">
                 <directory name="src/Controller"/>
                 <directory name="src/EventSubscriber"/>
+                <directory name="src/DataFixtures"/>
             </errorLevel>
         </UnusedClass>
+        <PossiblyUnusedMethod>
+            <errorLevel type="suppress">
+                <directory name="src/Entity"/>
+                <directory name="src/Repository"/>
+            </errorLevel>
+        </PossiblyUnusedMethod>
+        <PossiblyUnusedParam>
+            <errorLevel type="suppress">
+                <directory name="src/Repository"/>
+            </errorLevel>
+        </PossiblyUnusedParam>
     </issueHandlers>
 
     <plugins>

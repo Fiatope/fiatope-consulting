@@ -40,9 +40,11 @@ class BusinessArea
     {
         return $this->imageFile;
     }
-    public function setImageFile(?File $imageFile): BusinessArea
+
+    public function setImageFile(?File $imageFile): self
     {
         $this->imageFile = $imageFile;
+
         return $this;
     }
 

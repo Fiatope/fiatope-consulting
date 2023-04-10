@@ -7,7 +7,6 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Entity\File as EmbeddedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[Vich\Uploadable]
@@ -32,8 +31,11 @@ class Customer
     #[ORM\Column(length: 255)]
     private ?string $logo = null;
 
+    /**
+     * @var string[]|null
+     */
     #[ORM\Column(type: Types::SIMPLE_ARRAY, nullable: true)]
-    private array $types = [];
+    private ?array $types = [];
 
     public function getId(): ?int
     {
@@ -76,11 +78,17 @@ class Customer
         return $this;
     }
 
+    /**
+     * @return string[]|null
+     */
     public function getTypes(): ?array
     {
         return $this->types;
     }
 
+    /**
+     * @param string[] $types
+     */
     public function setTypes(array $types): self
     {
         $this->types = $types;
@@ -93,9 +101,10 @@ class Customer
         return $this->imageFile;
     }
 
-    public function setImageFile(?File $imageFile): Customer
+    public function setImageFile(?File $imageFile): self
     {
         $this->imageFile = $imageFile;
+
         return $this;
     }
 }

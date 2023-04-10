@@ -11,9 +11,13 @@
     <arg value="spvvv"/>
 
     <rule ref="PSR12"/>
+    <rule ref="Generic.Strings.UnnecessaryStringConcat">
+        <severity>0</severity>
+    </rule>
 
     <file>.</file>
 
+    <exclude-pattern>migrations</exclude-pattern>
     <exclude-pattern>vendor</exclude-pattern>
     <exclude-pattern>var</exclude-pattern>
     <exclude-pattern>node_modules</exclude-pattern>
