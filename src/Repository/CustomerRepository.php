@@ -52,7 +52,7 @@ class CustomerRepository extends ServiceEntityRepository
             ->getResult()
         ;
 
-        return array_filter($customers, function ($customer) use ($types) {
+        $customers = array_filter($customers, function ($customer) use ($types) {
             foreach ($types as $type) {
                 if (\in_array($type, $customer->getTypes(), true)) {
                     return true;
@@ -61,5 +61,7 @@ class CustomerRepository extends ServiceEntityRepository
 
             return false;
         });
+
+        return array_values($customers);
     }
 }
