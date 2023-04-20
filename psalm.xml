@@ -16,6 +16,7 @@
             <directory name="var"/>
             <directory name="node_modules"/>
             <directory name="migrations"/>
+            <directory name="tests"/>
         </ignoreFiles>
     </projectFiles>
 

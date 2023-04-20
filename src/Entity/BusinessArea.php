@@ -41,6 +41,9 @@ class BusinessArea
     #[ORM\Column(length: 255)]
     private ?string $fa_icon = null;
 
+    /**
+     * @var Collection<int, BusinessAreaSection>
+     */
     #[ORM\ManyToMany(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
     private Collection $sections;
 

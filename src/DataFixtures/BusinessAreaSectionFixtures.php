@@ -23,7 +23,7 @@ class BusinessAreaSectionFixtures extends Fixture implements FixtureGroupInterfa
 
         $i = 0;
         foreach ($components as $name => $component) {
-            $i++;
+            ++$i;
             $section =
                 (new BusinessAreaSection())
                 ->setName($name)

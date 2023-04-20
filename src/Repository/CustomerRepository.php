@@ -39,28 +39,27 @@ class CustomerRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Customer[] Returns an array of Customer objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('c.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * @param string[] $types
+     *
+     * @return Customer[]
+     */
+    public function findByTypes(array $types): array
+    {
+        $customers =
+            $this->createQueryBuilder('c')
+            ->getQuery()
+            ->getResult()
+        ;
 
-//    public function findOneBySomeField($value): ?Customer
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+        return array_filter($customers, function ($customer) use ($types) {
+            foreach ($types as $type) {
+                if (\in_array($type, $customer->getTypes(), true)) {
+                    return true;
+                }
+            }
+
+            return false;
+        });
+    }
 }

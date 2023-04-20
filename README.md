@@ -96,11 +96,18 @@ _Aller sur l'url de votre site_
 ## Lancer les tests
 
 ```bash
+php bin/console --env=test d:d:c
+php bin/console --env=test d:s:u --force --complete
+php bin/console --env=test d:f:l -n
+```
+
+```bash
 vendor/bin/phpcs
 vendor/bin/php-cs-fixer fix --diff --dry-run
 vendor/bin/phpunit
 vendor/bin/phpstan -vvv
 vendor/bin/psalm
+# vendor/bin/psalm --alter --issues=all --dry-run
 ```
 
 ## Corriger les erreurs potentielles

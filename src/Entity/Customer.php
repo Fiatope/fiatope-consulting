@@ -34,7 +34,7 @@ class Customer
     /**
      * @var string[]
      */
-    #[ORM\Column(type: Types::SIMPLE_ARRAY, nullable: true)]
+    #[ORM\Column(type: Types::SIMPLE_ARRAY)]
     private array $types = [];
 
     #[ORM\Column(length: 255)]

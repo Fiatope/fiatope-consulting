@@ -21,7 +21,7 @@ class CustomerApiController extends AbstractController
         $types = $request->query->get('types');
         if ($types) {
             $types = explode(',', $types);
-            $customers = $this->customerRepository->findBy(['types' => $types]);
+            $customers = $this->customerRepository->findByTypes($types);
         } else {
             $customers = $this->customerRepository->findAll();
         }

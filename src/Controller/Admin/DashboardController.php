@@ -49,7 +49,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('CMS');
         // admins
         // adresses
-        // social
-
+        // socials
     }
 }
