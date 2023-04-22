@@ -47,6 +47,14 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->setFormType(CKEditorType::class)
             ->hideOnIndex()
         ;
-        yield AssociationField::new('sections');
+        yield AssociationField::new('section_1')
+        ;
+
+        yield AssociationField::new('section_2')
+            ->setRequired(false)
+        ;
+        yield AssociationField::new('section_3')
+            ->setRequired(false)
+        ;
     }
 }

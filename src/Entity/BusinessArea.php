@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use function Amp\Iterator\filter;
 
 #[Vich\Uploadable]
 #[UniqueEntity(fields: ['slug'])]
@@ -41,11 +42,14 @@ class BusinessArea
     #[ORM\Column(length: 255)]
     private ?string $fa_icon = null;
 
-    /**
-     * @var Collection<int, BusinessAreaSection>
-     */
-    #[ORM\ManyToMany(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
-    private Collection $sections;
+    #[ORM\ManyToOne(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
+    private ?BusinessAreaSection $section_1 = null;
+
+    #[ORM\ManyToOne(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
+    private ?BusinessAreaSection $section_2 = null;
+
+    #[ORM\ManyToOne(targetEntity: BusinessAreaSection::class, inversedBy: 'areas')]
+    private ?BusinessAreaSection $section_3 = null;
 
     public function __construct()
     {
@@ -129,27 +133,52 @@ class BusinessArea
         return $this;
     }
 
+    public function getSection1(): ?BusinessAreaSection
+    {
+        return $this->section_1;
+    }
+
+    public function setSection1(?BusinessAreaSection $section_1): self
+    {
+        $this->section_1 = $section_1;
+
+        return $this;
+    }
+
+    public function getSection2(): ?BusinessAreaSection
+    {
+        return $this->section_2;
+    }
+
+    public function setSection2(?BusinessAreaSection $section_2): self
+    {
+        $this->section_2 = $section_2;
+
+        return $this;
+    }
+
+    public function getSection3(): ?BusinessAreaSection
+    {
+        return $this->section_3;
+    }
+
+    public function setSection3(?BusinessAreaSection $section_3): self
+    {
+        $this->section_3 = $section_3;
+
+        return $this;
+    }
+
     /**
-     * @return Collection<int, BusinessAreaSection>
+     * Retrieve all sections that are not null
+     * 
+     * @return array<BusinessAreaSection>
      */
-    public function getSections(): Collection
+    public function getSections(): array
     {
-        return $this->sections;
-    }
-
-    public function addSection(BusinessAreaSection $section): self
-    {
-        if (!$this->sections->contains($section)) {
-            $this->sections->add($section);
-        }
-
-        return $this;
-    }
-
-    public function removeSection(BusinessAreaSection $section): self
-    {
-        $this->sections->removeElement($section);
-
-        return $this;
+        return array_filter(
+            [$this->section_1, $this->section_2, $this->section_3],
+            fn(?BusinessAreaSection $section) => $section !== null
+        );
     }
 }
