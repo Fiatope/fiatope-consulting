@@ -15,6 +15,7 @@ header {
         transition: 1s;
         color: $white;
         width: 0;
+        z-index: 1;
 
         .toggle-menu {
             position: absolute;

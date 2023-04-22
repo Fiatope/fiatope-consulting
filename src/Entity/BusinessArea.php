@@ -171,7 +171,7 @@ class BusinessArea
 
     /**
      * Retrieve all sections that are not null
-     * 
+     *
      * @return array<BusinessAreaSection>
      */
     public function getSections(): array

@@ -6,6 +6,7 @@ use App\Entity\BusinessArea;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CodeEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
@@ -26,7 +27,6 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Aire d\'intervention')
             ->setEntityLabelInPlural('Aires d\'intervention')
             ->setPaginatorPageSize(10)
-            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
         ;
     }
 
@@ -43,8 +43,9 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->setUploadedFileNamePattern('[slug]-[uuid].[extension]')
             ->hideOnForm()
         ;
-        yield TextareaField::new('description')
-            ->setFormType(CKEditorType::class)
+        yield CodeEditorField::new('description')
+            ->setLanguage('markdown')
+            ->hideLineNumbers()
             ->hideOnIndex()
         ;
         yield AssociationField::new('section_1')

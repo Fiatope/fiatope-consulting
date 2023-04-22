@@ -58,6 +58,10 @@ footer {
 
         .links {
             grid-area: links;
+
+            ul {
+                margin-bottom: ratio-space(2);
+            }
         }
     }
 

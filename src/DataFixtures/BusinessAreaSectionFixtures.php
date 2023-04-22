@@ -13,12 +13,12 @@ class BusinessAreaSectionFixtures extends Fixture implements FixtureGroupInterfa
     {
         $components = [
             'Bailleurs de fonds' => 'backers',
-            'Coaching d\'entreprises' => 'coaching',
+            'Programmes d\'accélération' => 'programs',
             'Interventions académiques' => 'academic',
             'Conseils en transformation digital' => 'digital-advices',
             'Conseils aux opérateurs mobile' => 'mobile-advices',
             'Programmes digital' => 'digital-programs',
-            'Programmes d\'accélération' => 'programs'
+            'Coaching d\'entreprises' => 'coaching',
         ];
 
         $i = 0;
