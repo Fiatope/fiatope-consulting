@@ -79,16 +79,14 @@ main#area {
                     grid-template-columns: cols(7) cols(5);
                     grid-template-areas:
                         'title title'
-                        'text img'
-                    ;
+                        'text img';
                 }
 
                 &:nth-child(even) {
                     grid-template-columns: cols(5) cols(7);
                     grid-template-areas:
                         'title title'
-                        'img text'
-                    ;
+                        'img text';
                 }
 
                 .title {
@@ -106,6 +104,25 @@ main#area {
                     grid-area: text;
                 }
             }
+        }
+    }
+
+    .pagination {
+        @extend %grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'prev next';
+
+        .prev {
+            grid-area: prev;
+            justify-self: flex-start;
+            min-width: fit-content;
+        }
+
+        .next {
+            grid-area: next;
+            justify-self: flex-end;
+            min-width: fit-content;
         }
     }
 }

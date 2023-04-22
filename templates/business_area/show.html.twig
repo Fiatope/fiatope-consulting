@@ -30,4 +30,23 @@
             <article class='content' data-component='{{ section.component }}'></article>
         </section>
     {% endfor %}
+
+    <nav class='pagination'>
+        {% for a in areas %}
+            {% if a.id == area.id %}
+                {% if loop.index0 - 1 >= 0 %}
+                    <a href='{{ path('business_area', { 'slug': areas[loop.index0 - 1].slug }) }}'
+                       class='btn secondary prev'>
+                        ← {{ areas[loop.index0 - 1].name }}
+                    </a>
+                {% endif %}
+                {% if loop.index0 + 1 < areas|length %}
+                    <a href='{{ path('business_area', { 'slug': areas[loop.index0 + 1].slug }) }}'
+                       class='btn secondary next'>
+                        {{ areas[loop.index0 + 1].name }} →
+                    </a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </nav>
 {% endblock %}
