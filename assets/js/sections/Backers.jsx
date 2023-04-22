@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
+import Customers from '../components/Customers'
 
 function Backers() {
     const [customers, setCustomers] = useState([])
@@ -18,18 +19,7 @@ function Backers() {
                 Soutiens aux bailleurs de fonds pour renforcer l’entreprenariat
             </h3>
             <div className="area-section_customers">
-                {customers.map((customer, index) => (
-                    <div className="customer" key={index}>
-                        <img
-                            src={customer.logo}
-                            alt={customer.name}
-                            width="300"
-                            height="150"
-                        />
-                        <p className="country">{customer.country}</p>
-                        <p className="description">{customer.description}</p>
-                    </div>
-                ))}
+                <Customers customers={customers}/>
             </div>
         </>
     )

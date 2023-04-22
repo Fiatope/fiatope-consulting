@@ -35,7 +35,7 @@ main#area {
         }
 
         article {
-            h3, h4, h5 {
+            h3 {
                 text-align: center;
                 margin-bottom: ratio-space(8);
             }
@@ -45,6 +45,7 @@ main#area {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: ratio-space(8);
+                margin-top: ratio-space(4);
 
                 .customer {
                     width: 300px;
@@ -63,8 +64,46 @@ main#area {
                     }
 
                     .description {
-                        text-align: justify;
+                        text-align: center;
+                        white-space: pre-line;
                     }
+                }
+            }
+
+            .area-section_article {
+                @extend %grid;
+                align-items: center;
+                margin-bottom: ratio-space(8);
+
+                &:nth-child(odd) {
+                    grid-template-columns: cols(7) cols(5);
+                    grid-template-areas:
+                        'title title'
+                        'text img'
+                    ;
+                }
+
+                &:nth-child(even) {
+                    grid-template-columns: cols(5) cols(7);
+                    grid-template-areas:
+                        'title title'
+                        'img text'
+                    ;
+                }
+
+                .title {
+                    grid-area: title;
+                    margin-bottom: ratio-space(1);
+                }
+
+                .img {
+                    grid-area: img;
+                    object-fit: contain;
+                    width: 100%;
+                }
+
+                .text {
+                    grid-area: text;
                 }
             }
         }

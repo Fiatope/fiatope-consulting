@@ -121,7 +121,7 @@ class CustomerFixtures extends Fixture implements FixtureGroupInterface
 
         $customer12 = (new Customer())
             ->setCountry('France')
-            ->setDescription('Entrepreneuriat\nFinancement d’entreprise\nFinance digitale')
+            ->setDescription("Entrepreneuriat\nFinancement d’entreprise\nFinance digitale")
             ->setLogo('uca.png')
             ->setTypes(['college'])
             ->setName('Université Clermont Auvergne')
