@@ -64,8 +64,9 @@
                     {% endfor %}
                     <nav class="social">
                         <h2>Réseaux sociaux</h2>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        {% for social in socials %}
+                            <a href="{{ social.link }}" target='_blank'><i class="fa-brands fa-{{ social.name }}"></i></a>
+                        {% endfor %}
                     </nav>
                     <nav class="links">
                         <h2>Navigation</h2>

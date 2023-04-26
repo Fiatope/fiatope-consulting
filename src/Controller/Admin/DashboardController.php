@@ -7,6 +7,7 @@ use App\Entity\BusinessArea;
 use App\Entity\BusinessAreaSection;
 use App\Entity\ContactMessage;
 use App\Entity\Customer;
+use App\Entity\SocialMedia;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -51,6 +52,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('CMS');
         // admins
         yield MenuItem::linkToCrud('Adresses', 'fas fa-location-dot', Address::class);
-        // socials
+        yield MenuItem::linkToCrud('Réseaux sociaux', 'far fa-thumbs-up', SocialMedia::class);
     }
 }
