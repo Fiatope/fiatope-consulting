@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Customers = ({ customers }) => (
-    <div className="area-section_customers">
+const InlineCustomers = ({ customers }) => (
+    <div className="area-section_inline-customers">
         {customers?.map((customer, index) => (
             <div className="customer" key={index}>
                 <img
@@ -17,4 +17,4 @@ const Customers = ({ customers }) => (
     </div>
 )
 
-export default Customers
+export default InlineCustomers

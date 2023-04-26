@@ -21,7 +21,7 @@ class Customer
     #[ORM\Column(length: 60)]
     private ?string $country = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 500, nullable: true)]
     private ?string $description = null;
 
     #[Assert\File(mimeTypes: ['image/jpeg', 'image/png'])]
