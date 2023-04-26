@@ -9,7 +9,6 @@ function Backers() {
             .then((res) => res.json())
             .then((data) => {
                 setCustomers(data)
-                console.log(data[0])
             })
     }, [])
 

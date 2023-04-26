@@ -104,6 +104,12 @@ main#area {
                     grid-area: text;
                 }
             }
+
+            &[data-component='acceleration'] {
+                .article_1 {
+                    margin-bottom: ratio-space(8);
+                }
+            }
         }
     }
 

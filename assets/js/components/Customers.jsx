@@ -2,7 +2,6 @@ import React from 'react'
 
 const Customers = ({ customers }) => (
     <div className="area-section_customers">
-        {console.log(customers)}
         {customers.map((customer, index) => (
             <div className="customer" key={index}>
                 <img

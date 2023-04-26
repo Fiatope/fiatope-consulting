@@ -1,0 +1,106 @@
+.timeline {
+    position: relative;
+    margin: ratio-space(4) auto auto;
+    @extend %flex;
+    flex-wrap: wrap;
+    gap: ratio-space(4) 200px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .item {
+        position: relative;
+        width: 400px;
+        max-width: cols(4);
+        @extend %shadow;
+        padding: ratio-space(3);
+        border-radius: 3px;
+
+        .item-title {
+            text-align: center;
+            margin-bottom: ratio-space(3);
+            line-height: 1.5em;
+            font-weight: 600;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            background: $primary-color;
+            width: 50%;
+            height: 3px;
+            border-radius: 3px;
+        }
+
+        &:nth-child(even) {
+            transform: translateY(50%);
+
+            &::after {
+                right: -50%;
+            }
+        }
+
+        &:nth-child(odd) {
+            &::after {
+                left: -50%;
+            }
+        }
+
+/*
+        @media #{$media-up-md} {
+            &:nth-child(odd) {
+                left: 25%;
+                transform: skewY(-11deg) translate(-50%);
+
+                @media screen and (min-width: 1200px) {
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        background-color: $primary-color;
+                        width: 61%;
+                        height: 5px;
+                        top: 80%;
+                        transform: rotate(11deg);
+                        left: 98%;
+                        border-radius: 50px;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                left: 75%;
+                transform: skewY(-11deg) translate(-50%);
+
+                @media screen and (min-width: 1200px) {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background-color: $primary-color;
+                        width: 61%;
+                        height: 5px;
+                        transform: rotate(11deg);
+                        bottom: 80%;
+                        right: 98%;
+                    }
+                }
+            }
+        }
+
+        @media #{$media-down-md} {
+            margin: ratio-space(4) auto;
+        }*/
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, $primary-color 35%, transparent 35%, transparent 100%);
+        background-size: 100% 30px;
+
+    }
+}
