@@ -45,28 +45,23 @@
             <footer>
                 <div class="grid">
                     <img src="{{ asset('assets/img/logo-min.svg') }}" alt="Logo de {{ app_name }}" class="logo" width="124" height="124">
-                    <address class="address1">
-                        <h2>France</h2>
-                        <p>{{ app_name }}</p>
-                        <p>
-                            4517 Washington Ave. Manchester,
-                            <br/>Kentucky
-                            <br/>39495
-                        </p>
-                        <p>Numéro : <a href="tel:">(406) 555-0120</a></p>
-                        <p>E-mail : <a href="mailto:">jackson.graham@example.com</a></p>
-                    </address>
-                    <address class="address2">
-                        <h2>Cameroun</h2>
-                        <p>{{ app_name }}</p>
-                        <p>
-                            4517 Washington Ave. Manchester,
-                            <br/>Kentucky
-                            <br/>39495
-                        </p>
-                        <p>Numéro : <a href="tel:">(406) 555-0120</a></p>
-                        <p>E-mail : <a href="mailto:">jackson.graham@example.com</a></p>
-                    </address>
+                    {% dump(addresses) %}
+                    {% for address in addresses %}
+                        <address>
+                            <h2>{{ address.country }}</h2>
+                            <p>{{ address.name }}</p>
+                            <p>
+                                {{ address.street }},
+                                <br/>{{ address.zipcode }} {{ address.city }}
+                            </p>
+                            {% if (address.phone is not empty) %}
+                                <p>Numéro : <a href="tel:{{ address.phone }}">{{ address.phone }}</a></p>
+                            {% endif %}
+                            {% if (address.mail is not empty) %}
+                                <p>E-mail : <a href="mailto:{{ address.mail }}">{{ address.mail }}</a></p>
+                            {% endif %}
+                        </address>
+                    {% endfor %}
                     <nav class="social">
                         <h2>Réseaux sociaux</h2>
                         <a href=""><i class="fa-brands fa-facebook"></i></a>

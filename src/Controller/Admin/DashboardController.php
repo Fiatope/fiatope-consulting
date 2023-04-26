@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Address;
 use App\Entity\BusinessArea;
 use App\Entity\BusinessAreaSection;
 use App\Entity\ContactMessage;
@@ -49,7 +50,7 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::section('CMS');
         // admins
-        // adresses
+        yield MenuItem::linkToCrud('Adresses', 'fas fa-location-dot', Address::class);
         // socials
     }
 }
