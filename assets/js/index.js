@@ -1,7 +1,7 @@
 import './sections/Backers'
 import './sections/Academic'
 import './sections/Coaching'
-import './sections/DigitalAdvices'
+import './sections/DigitalTransformation'
 import './sections/DigitalPrograms'
 import './sections/MobileAdvices'
 import './sections/AccelerationPrograms'

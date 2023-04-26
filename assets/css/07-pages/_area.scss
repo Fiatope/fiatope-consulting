@@ -75,14 +75,14 @@ main#area {
                 align-items: center;
                 margin-bottom: ratio-space(8);
 
-                &:nth-child(odd) {
+                &:nth-of-type(odd) {
                     grid-template-columns: cols(7) cols(5);
                     grid-template-areas:
                         'title title'
                         'text img';
                 }
 
-                &:nth-child(even) {
+                &:nth-of-type(even) {
                     grid-template-columns: cols(5) cols(7);
                     grid-template-areas:
                         'title title'

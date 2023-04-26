@@ -33,12 +33,12 @@ class BusinessAreaSectionCrudController extends AbstractCrudController
         yield ChoiceField::new('component')
             ->setChoices([
                 'Bailleurs de fonds' => 'backers',
-                'Coaching d\entreprises' => 'coaching',
+                'Programmes d\'accélération' => 'acceleration',
                 'Interventions académiques' => 'academic',
-                'Conseils en transformation digital' => 'digital-advices',
+                'Conseils en transformation digital' => 'digital-transformation',
                 'Conseils aux opérateurs mobile' => 'mobile-advices',
                 'Programmes digital' => 'digital-programs',
-                'Programmes d\'accélération' => 'programs'
+                'Coaching d\'entreprises' => 'coaching',
             ])
         ;
         yield ImageField::new('image')

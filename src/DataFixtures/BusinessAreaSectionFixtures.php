@@ -15,7 +15,7 @@ class BusinessAreaSectionFixtures extends Fixture implements FixtureGroupInterfa
             'Bailleurs de fonds' => 'backers',
             'Programmes d\'accélération' => 'acceleration',
             'Interventions académiques' => 'academic',
-            'Conseils en transformation digital' => 'digital-advices',
+            'Conseils en transformation digital' => 'digital-transformation',
             'Conseils aux opérateurs mobile' => 'mobile-advices',
             'Programmes digital' => 'digital-programs',
             'Coaching d\'entreprises' => 'coaching',

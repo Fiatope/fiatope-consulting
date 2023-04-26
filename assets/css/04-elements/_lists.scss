@@ -13,4 +13,12 @@ ul {
         list-style-type: disc;
         list-style-position: inside;
     }
+
+    ol {
+        counter-reset: list;
+        li::before {
+            content: counter(list, decimal) ') ';
+            counter-increment: list;
+        }
+    }
 }
