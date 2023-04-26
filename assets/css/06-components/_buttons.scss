@@ -1,5 +1,5 @@
 .btn {
-    padding: ratio-space(1.5);
+    padding: ratio-space(1.5) ratio-space(3);
     text-transform: uppercase;
     display: inline-block;
     font-weight: 600;
@@ -34,6 +34,7 @@
 
     &.secondary {
         background: $white;
+        border: solid 1px $light-grey;
 
         &::before {
             background: $primary-color;
@@ -51,6 +52,7 @@
 
         &.secondary {
             color: $white;
+            border-color: transparent;
         }
     }
 }

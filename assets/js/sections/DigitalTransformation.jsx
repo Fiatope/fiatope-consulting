@@ -14,10 +14,10 @@ const DigitalTransformation = () => {
 
     return <>
         <div className='area-section_article'>
-            <header className='title'>
+            <hgroup className='title'>
                 <h4>Cursus entrepreneur</h4>
                 <h5>Il adresse 10 objectifs</h5>
-            </header>
+            </hgroup>
             <img src='assets/img/transformation-1.svg' alt='Cursus entrepreneur' className='img' />
             <p className='text'>
                 Il s'agit de permettre aux entrepreneurs du numérique
@@ -39,10 +39,10 @@ const DigitalTransformation = () => {
             </p>
         </div>
         <div className='area-section_article'>
-            <header className='title'>
+            <hgroup className='title'>
                 <h4>Cursus pouvoirs publics</h4>
                 <h5>Il adresse 5 enjeux et problématiques</h5>
-            </header>
+            </hgroup>
             <img src='assets/img/transformation-2.svg' alt='Cursus pouvoirs publics' className='img' />
             <p className='text'>
                 Dont la compréhension va permettre aux décideurs

@@ -5,10 +5,10 @@ const AccelerationPrograms = () => {
     return <>
         <h3>Programmes d’accéleration d'entrepreneurs vers le financement</h3>
         <div className='article_1'>
-            <header>
+            <hgroup>
                 <h4>Fiatope Accéleration</h4>
                 <h5>Booste ton financement</h5>
-            </header>
+            </hgroup>
             <div className='timeline'>
                 <div className='item'>
                     <div className='item-content'>

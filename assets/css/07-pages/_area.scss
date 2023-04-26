@@ -23,7 +23,7 @@ main#area {
     }
 
     section.area-section {
-        hgroup {
+        > hgroup {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -97,14 +97,14 @@ main#area {
                 margin-bottom: ratio-space(8);
 
                 &:nth-of-type(even) {
-                    grid-template-columns: cols(7) cols(5);
+                    grid-template-columns: calc(cols(7) - ratio-space(3)) cols(5);
                     grid-template-areas:
                         'title title'
                         'text img';
                 }
 
                 &:nth-of-type(odd) {
-                    grid-template-columns: cols(5) cols(7);
+                    grid-template-columns: cols(5) calc(cols(7) - ratio-space(3));
                     grid-template-areas:
                         'title title'
                         'img text';
@@ -123,6 +123,10 @@ main#area {
 
                 .text {
                     grid-area: text;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
 
@@ -150,6 +154,62 @@ main#area {
             grid-area: next;
             justify-self: flex-end;
             min-width: fit-content;
+        }
+    }
+
+    @media #{$media-down-md} {
+        .content_body {
+            flex-direction: column-reverse;
+
+            .content_text, img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        section.area-section {
+            article {
+                .area-section_article {
+                    &:nth-of-type(odd), &:nth-of-type(even) {
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                            'title'
+                            'img'
+                            'text';
+                    }
+
+                    .img {
+                        height: auto;
+                    }
+                }
+
+                .area-section_inline-customers {
+                    .customer {
+                        grid-template-areas:
+                            'img'
+                            'country'
+                            'description';
+
+                        img {
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .pagination {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                    'prev'
+                    'next'
+            ;
+
+            .prev, .next {
+                width: min(365px, 100%);
+            }
         }
     }
 }

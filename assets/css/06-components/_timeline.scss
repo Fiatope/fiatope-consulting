@@ -22,7 +22,7 @@
             font-weight: 600;
         }
 
-        &::after {
+        &::after {  // item side line
             content: '';
             position: absolute;
             top: 50%;
@@ -45,62 +45,35 @@
                 left: -50%;
             }
         }
-
-/*
-        @media #{$media-up-md} {
-            &:nth-child(odd) {
-                left: 25%;
-                transform: skewY(-11deg) translate(-50%);
-
-                @media screen and (min-width: 1200px) {
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        background-color: $primary-color;
-                        width: 61%;
-                        height: 5px;
-                        top: 80%;
-                        transform: rotate(11deg);
-                        left: 98%;
-                        border-radius: 50px;
-                    }
-                }
-            }
-
-            &:nth-child(even) {
-                left: 75%;
-                transform: skewY(-11deg) translate(-50%);
-
-                @media screen and (min-width: 1200px) {
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        background-color: $primary-color;
-                        width: 61%;
-                        height: 5px;
-                        transform: rotate(11deg);
-                        bottom: 80%;
-                        right: 98%;
-                    }
-                }
-            }
-        }
-
-        @media #{$media-down-md} {
-            margin: ratio-space(4) auto;
-        }*/
     }
 
-    &::after {
+    &::after { // time line
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
         transform: translate(-50%);
-        width: 3px;
+        width: 2px;
         height: 100%;
         background: linear-gradient(to bottom, $primary-color 35%, transparent 35%, transparent 100%);
         background-size: 100% 30px;
+    }
 
+    @media #{$media-down-md} {
+        justify-content: center;
+
+        .item {
+            max-width: none;
+            width: 400px;
+            transform: none!important;
+
+            &::after { // item side line
+                display: none;
+            }
+        }
+
+        &::after { // time line
+            display: none;
+        }
     }
 }
