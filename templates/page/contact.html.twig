@@ -2,23 +2,27 @@
 
 {% block page_name %}Contact{% endblock %}
 
-{% block body_attr %}id="contact"{% endblock %}
+{% block main_attr %}id="contact"{% endblock %}
 
 {% block main %}
     <section>
         <div class="content">
             <h1>Laissez-nous un message</h1>
             <p>
+                Pour nous contacter, vous pouvez utiliser le formulaire ci-dessous ou nous envoyer un email à
+                <a href="mailto:" class="link">jackson.graham@example.com</a>. Nous vous répondrons dans les plus brefs délais.
+            </p>
+            {{ form_start(form) }}
+                <div class='row'>
+                    {{ form_row(form.name) }}
+                    {{ form_row(form.mail) }}
+                </div>
+                {{ form_row(form.content) }}
+                <button type='submit' class='btn primary'>Envoyer</button>
+            {{ form_end(form) }}
+            <p>
                 Nous sommes à votre disposition pour répondre à vos questions et vous accompagner dans vos projets.
             </p>
-            <p>
-                Pour nous contacter, vous pouvez utiliser le formulaire ci-dessous ou nous envoyer un email à
-                <a href="mailto:" class="link">.</a>
-            </p>
-            <p>
-                Nous vous répondrons dans les plus brefs délais.
-            </p>
-            {# TODO: add contact form #}
         </div>
     </section>
 {% endblock %}

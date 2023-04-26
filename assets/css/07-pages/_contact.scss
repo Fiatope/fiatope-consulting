@@ -1,0 +1,10 @@
+main#contact {
+    h1 {
+        text-align: center;
+        margin-bottom: ratio-space(8);
+    }
+
+    a {
+        @extend %link;
+    }
+}

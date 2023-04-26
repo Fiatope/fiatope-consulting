@@ -1,5 +1,6 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    form_themes: ['custom/form.html.twig']
     globals:
         app_name: "%env(APP_NAME)%"
 

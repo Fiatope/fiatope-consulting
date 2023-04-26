@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\BusinessArea;
 use App\Entity\BusinessAreaSection;
+use App\Entity\ContactMessage;
 use App\Entity\Customer;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -44,7 +45,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Clients et Partenaires', 'fas fa-handshake-simple', Customer::class);
 
         yield MenuItem::section('Messages');
-        //        yield MenuItem::linkToCrud('The Label', 'fas fa-list', Message::class);
+        yield MenuItem::linkToCrud('Messages reçus', 'fas fa-envelope', ContactMessage::class);
 
         yield MenuItem::section('CMS');
         // admins

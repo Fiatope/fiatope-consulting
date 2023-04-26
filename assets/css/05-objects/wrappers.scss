@@ -1,4 +1,4 @@
-%flex {
+%flex, .row {
     display: flex;
     gap: ratio-space(2);
 }
@@ -34,11 +34,30 @@
         width: 0;
         transition: .3s;
         z-index: -1;
+        left: 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: linear-gradient(to right, rgba($primary-color, 75%) 50%, transparent 50%, transparent 100%);
+        background-size: 5px;
+        transform: skew(22deg);
+        height: 1px;
+        bottom: .2rem;
+        width: 100%;
+        transition: .3s;
+        z-index: -1;
+        left: 0;
     }
 
     &:hover {
         &::before {
             width: 100%;
+        }
+
+        &::after {
+            background-size: 0;
         }
     }
 }
