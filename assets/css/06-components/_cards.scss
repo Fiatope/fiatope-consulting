@@ -31,10 +31,10 @@
         }
 
         &:nth-child(even) {
-            animation: floating 3s ease-in-out infinite reverse;
+            animation: floating 6s ease-in-out infinite reverse;
         }
         &:nth-child(odd) {
-            animation: floating 3s ease-in-out infinite;
+            animation: floating 6s ease-in-out infinite;
         }
     }
 }
