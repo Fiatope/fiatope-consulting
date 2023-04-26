@@ -96,14 +96,14 @@ main#area {
                 align-items: center;
                 margin-bottom: ratio-space(8);
 
-                &:nth-of-type(odd) {
+                &:nth-of-type(even) {
                     grid-template-columns: cols(7) cols(5);
                     grid-template-areas:
                         'title title'
                         'text img';
                 }
 
-                &:nth-of-type(even) {
+                &:nth-of-type(odd) {
                     grid-template-columns: cols(5) cols(7);
                     grid-template-areas:
                         'title title'
@@ -112,7 +112,7 @@ main#area {
 
                 .title {
                     grid-area: title;
-                    margin-bottom: ratio-space(1);
+                    margin-bottom: ratio-space(4);
                 }
 
                 .img {
