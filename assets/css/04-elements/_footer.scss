@@ -20,10 +20,10 @@ footer {
 
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        'logo logo'
-        'address1 social'
-        'address2 links'
-    ;
+            'logo logo'
+            'address1 social'
+            'address2 links'
+        ;
 
         .logo {
             grid-area: logo;
@@ -69,5 +69,18 @@ footer {
         padding: ratio-space(2) ratio-space(3);
         background: $primary-color;
         color: $white;
+    }
+
+    @media #{$media-down-md} {
+        .grid {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'logo'
+                'address1'
+                'address2'
+                'links'
+                'social'
+            ;
+        }
     }
 }
