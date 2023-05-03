@@ -45,7 +45,6 @@
             <footer>
                 <div class="grid">
                     <img src="{{ asset('assets/img/logo-min.svg') }}" alt="Logo de {{ app_name }}" class="logo" width="124" height="124">
-                    {% dump(addresses) %}
                     {% for address in addresses %}
                         <address>
                             <h2>{{ address.country }}</h2>

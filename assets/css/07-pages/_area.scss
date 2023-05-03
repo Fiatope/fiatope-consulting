@@ -11,9 +11,11 @@ main#area {
 
         .content_text {
             width: cols(5);
+            white-space: pre-line;
 
             a {
                 @extend %link;
+                display: inline;
             }
         }
 
