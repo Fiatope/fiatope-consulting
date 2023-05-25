@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
-    public function __construct(private string $app_name = '')
+    public function __construct(private readonly string $app_name = '')
     {
     }
 
