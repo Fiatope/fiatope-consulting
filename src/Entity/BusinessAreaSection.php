@@ -38,7 +38,7 @@ class BusinessAreaSection
     /**
      * @var Collection<int, BusinessArea>
      */
-    #[ORM\ManyToMany(targetEntity: BusinessArea::class, mappedBy: 'sections')]
+    #[ORM\OneToMany(mappedBy: 'section_1', targetEntity: BusinessArea::class)]
     private Collection $areas;
 
     public function __construct()

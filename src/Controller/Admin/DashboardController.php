@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Address;
+use App\Entity\Admin;
 use App\Entity\BusinessArea;
 use App\Entity\BusinessAreaSection;
 use App\Entity\ContactMessage;
@@ -49,8 +50,10 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Messages');
         yield MenuItem::linkToCrud('Messages reçus', 'fas fa-envelope', ContactMessage::class);
 
-        yield MenuItem::section('CMS');
-        // admins
+        yield MenuItem::section('Configuration');
+        if ($this->isGranted('ROLE_ADMIN')) {
+            yield MenuItem::linkToCrud('Administrateurs', 'fas fa-file-shield', Admin::class);
+        }
         yield MenuItem::linkToCrud('Adresses', 'fas fa-location-dot', Address::class);
         yield MenuItem::linkToCrud('Réseaux sociaux', 'far fa-thumbs-up', SocialMedia::class);
     }
