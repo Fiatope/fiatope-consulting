@@ -119,7 +119,7 @@ const AccelerationPrograms = () => {
         </div>
         <div className='area-section_article'>
             <h4 className='title'>Fiatope funding readiness</h4>
-            <img className='img' src='assets/img/acceleration-1.svg' alt='Fiatope Funding Readiness' />
+            <img className='img' src='/assets/img/acceleration-1.svg' alt='Fiatope Funding Readiness' />
             <p className='text'>
                 Le programme de préparation à l'investissement de Fiatope Consulting contient 10 items.
                 <ul>
@@ -138,7 +138,7 @@ const AccelerationPrograms = () => {
         </div>
         <div className='area-section_article'>
             <h4 className='title'>Fiatope accès au financement</h4>
-            <img src='assets/img/acceleration-2.svg' alt='Fiatope accès au financement' className='img' />
+            <img src='/assets/img/acceleration-2.svg' alt='Fiatope accès au financement' className='img' />
             <p className='text'>
                 Nous avons également une formation qui éclaire des entrepreneurs et porteurs de projet sur l'accès au financement. Nous abordons les points
                 suivants :

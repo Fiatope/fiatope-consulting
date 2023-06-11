@@ -43,6 +43,9 @@ class BusinessAreaCrudController extends AbstractCrudController
             ->setUploadedFileNamePattern('[slug]-[uuid].[extension]')
             ->hideOnForm()
         ;
+        yield TextField::new('fa_icon')
+            ->setHelp('Choisissez une icône depuis https://fontawesome.com/search')
+        ;
         yield CodeEditorField::new('description')
             ->setLanguage('markdown')
             ->hideLineNumbers()

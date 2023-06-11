@@ -43,6 +43,6 @@ class BusinessAreaSectionFixtures extends Fixture implements FixtureGroupInterfa
 
     public static function getGroups(): array
     {
-        return ['dev'];
+        return ['dev', 'prod'];
     }
 }

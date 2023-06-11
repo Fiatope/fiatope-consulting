@@ -18,7 +18,7 @@ const DigitalTransformation = () => {
                 <h4>Cursus entrepreneur</h4>
                 <h5>Il adresse 10 objectifs</h5>
             </hgroup>
-            <img src='assets/img/transformation-1.svg' alt='Cursus entrepreneur' className='img' />
+            <img src='/assets/img/transformation-1.svg' alt='Cursus entrepreneur' className='img' />
             <p className='text'>
                 Il s'agit de permettre aux entrepreneurs du numérique
                 <ol>
@@ -43,7 +43,7 @@ const DigitalTransformation = () => {
                 <h4>Cursus pouvoirs publics</h4>
                 <h5>Il adresse 5 enjeux et problématiques</h5>
             </hgroup>
-            <img src='assets/img/transformation-2.svg' alt='Cursus pouvoirs publics' className='img' />
+            <img src='/assets/img/transformation-2.svg' alt='Cursus pouvoirs publics' className='img' />
             <p className='text'>
                 Dont la compréhension va permettre aux décideurs
                 d'orienter les politiques publiques.

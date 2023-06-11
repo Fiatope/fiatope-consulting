@@ -20,8 +20,6 @@ class LoginController extends AbstractController
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        dump($error, $lastUsername, $authenticationUtils);
-
         return $this->render('@EasyAdmin/page/login.html.twig', [
             'error' => $error,
             'last_username' => $lastUsername,
