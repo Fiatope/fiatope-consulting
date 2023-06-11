@@ -32,7 +32,7 @@ class CustomerApiController extends AbstractController
             $filteredCustomer['name'] = $customer->getName();
             $filteredCustomer['description'] = $customer->getDescription();
             $filteredCustomer['country'] = $customer->getCountry();
-            $filteredCustomer['logo'] = 'uploads/img/' . ($customer->getLogo() ?? '');
+            $filteredCustomer['logo'] = '/uploads/img/' . ($customer->getLogo() ?? '');
 
             return $filteredCustomer;
         }, $customers);
