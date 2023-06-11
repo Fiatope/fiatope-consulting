@@ -16,7 +16,7 @@ const Academic = () => {
         <h3>Interventions académiques : 3 secteurs</h3>
         <div className='area-section_article'>
             <h4 className="title">Financement des petites entreprises</h4>
-            <img className='img' src="assets/img/academic-1.svg" alt="Financement des petites entreprises" width="500"
+            <img className='img' src="/assets/img/academic-1.svg" alt="Financement des petites entreprises" width="500"
                  height="300" />
             <p className='text'>
                 Nous abordons pendant cette formation tous les rouages du financement d'entreprises en amorçage c'est-à-dire
@@ -29,7 +29,7 @@ const Academic = () => {
         </div>
         <div className='area-section_article'>
             <h4 className="title">Finance digitale</h4>
-            <img className='img' src="assets/img/academic-2.svg" alt="Finance digitale" width="500" height="300" />
+            <img className='img' src="/assets/img/academic-2.svg" alt="Finance digitale" width="500" height="300" />
             <p className='text'>
                 La finance digitale désigne l'ensemble des opérations qui permettent de financer l'économie et de
                 payer/recevoir un paiement par le digital.
@@ -40,7 +40,7 @@ const Academic = () => {
         </div>
         <div className='area-section_article'>
             <h4 className="title">Entrepreneuriat</h4>
-            <img className='img' src="assets/img/academic-3.svg" alt="Entrepreneuriat" width="500" height="300" />
+            <img className='img' src="/assets/img/academic-3.svg" alt="Entrepreneuriat" width="500" height="300" />
             <p className='text'>
                 Dans ce module nous familiarisons les étudiants avec la philosophie entrepreneuriale en prenant soin déjà de
                 leur dire les qualités requises d’un entrepreneur et les exigences de ce type d’activité professionnelle.
