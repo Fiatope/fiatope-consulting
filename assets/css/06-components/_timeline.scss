@@ -20,6 +20,10 @@
             margin-bottom: ratio-space(3);
             line-height: 1.5em;
             font-weight: 600;
+
+            &::first-line {
+                color: $primary-color;
+            }
         }
 
         &::after {  // item side line
