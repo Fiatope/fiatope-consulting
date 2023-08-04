@@ -55,6 +55,7 @@ body > header {
 
         &.active {
             width: 80%;
+            max-width: 400px;
             height: 100vh;
             background: $primary-color;
 
