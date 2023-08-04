@@ -49,7 +49,7 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface, Dep
             )
             ->setImage('transformation-digitale.svg')
             ->setFaIcon('fa-solid fa-laptop-file')
-            ->setSection1($sections[3] ?? null) // Conseils en transformation digital
+            ->setSection1($sections[3] ?? null) // Conseil en transformation digital
             ->setSection2($sections[2] ?? null) // Interventions académiques
         ;
 
@@ -63,7 +63,7 @@ class BusinessAreaFixtures extends Fixture implements FixtureGroupInterface, Dep
             )
             ->setImage('operateurs-mobiles.svg')
             ->setFaIcon('fa-solid fa-mobile-screen-button')
-            ->setSection1($sections[4] ?? null) // Conseils aux opérateurs mobile
+            ->setSection1($sections[4] ?? null) // Conseil aux opérateurs mobile
             ->setSection2($sections[5] ?? null) // Programmes digital
         ;
 

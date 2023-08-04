@@ -35,8 +35,8 @@ class BusinessAreaSectionCrudController extends AbstractCrudController
                 'Bailleurs de fonds' => 'backers',
                 'Programmes d\'accélération' => 'acceleration',
                 'Interventions académiques' => 'academic',
-                'Conseils en transformation digital' => 'digital-transformation',
-                'Conseils aux opérateurs mobile' => 'mobile-advices',
+                'Conseil en transformation digital' => 'digital-transformation',
+                'Conseil aux opérateurs mobile' => 'mobile-advices',
                 'Programmes digital' => 'digital-programs',
                 'Coaching d\'entreprises' => 'coaching',
             ])
