@@ -13,6 +13,7 @@
         padding: ratio-space(3);
         @extend %flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: ratio-space(3);
         border-radius: 3px;
 
@@ -35,6 +36,13 @@
         }
         &:nth-child(odd) {
             animation: floating 6s ease-in-out infinite;
+        }
+    }
+
+    @media #{$media-down-md} {
+        .card {
+            width: 100%;
+            min-width: auto;
         }
     }
 }
