@@ -14,7 +14,7 @@ const AccelerationPrograms = () => {
                     <div className='item-content'>
                         <h6 className='item-title'>
                             Session 1
-                            <br/>CAPITALISER
+                            <br/>Capitaliser
                         </h6>
                         <p>
                             <ul>
@@ -28,14 +28,14 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Session 2
+                            <br/>Renforcer
                         </h6>
                         <p>
                             <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
+                                <li>Le volet innovation</li>
+                                <li>Le Business Model Canvas/SWOT</li>
+                                <li>Le Business Plan</li>
                             </ul>
                         </p>
                     </div>
@@ -43,14 +43,14 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Session 3
+                            <br/>Concrétiser
                         </h6>
                         <p>
                             <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
+                                <li>Bootstrapper</li>
+                                <li>Définir son MVP</li>
+                                <li>Dérouler son Business Plan</li>
                             </ul>
                         </p>
                     </div>
@@ -58,14 +58,14 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Session 4
+                            <br/>Gérer
                         </h6>
                         <p>
                             <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
+                                <li>Le Lean StartUp</li>
+                                <li>Opérer au quotidien et prioriser</li>
+                                <li>« Recruter »</li>
                             </ul>
                         </p>
                     </div>
@@ -73,14 +73,15 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Session 5
+                            <br/>Conquérir
                         </h6>
                         <p>
                             <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
+                                <li>Définir son impact social</li>
+                                <li>Définir sa marque et son branding</li>
+                                <li>Construire son réseau d'influence</li>
+                                <li>Mettre en place son audience</li>
                             </ul>
                         </p>
                     </div>
@@ -88,14 +89,14 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Session 6
+                            <br/>Mesurer et Agir
                         </h6>
                         <p>
                             <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
+                                <li>Ses premiers chiffres</li>
+                                <li>Evaluer ses ressources et forces en présence</li>
+                                <li>Définir un plan de développement</li>
                             </ul>
                         </p>
                     </div>
@@ -103,15 +104,14 @@ const AccelerationPrograms = () => {
                 <div className='item'>
                     <div className='item-content'>
                         <h6 className='item-title'>
-                            Session 1
-                            <br/>CAPITALISER
+                            Le présentiel
                         </h6>
                         <p>
-                            <ul>
-                                <li>Votre profil d’entrepreneur</li>
-                                <li>Vos motivations</li>
-                                <li>Vos valeurs</li>
-                            </ul>
+                            Il permettra de réaborder les sujets vus en
+                            session, mais aussi d'aller plus loin en couvrant
+                            notamment l'introduction au crowdfunding et
+                            d'autres sujets comme l'art de pitcher, le
+                            renforcement de son leadership...
                         </p>
                     </div>
                 </div>

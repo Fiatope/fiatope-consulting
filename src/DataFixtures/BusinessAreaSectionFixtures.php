@@ -17,7 +17,7 @@ class BusinessAreaSectionFixtures extends Fixture implements FixtureGroupInterfa
             'Interventions académiques' => 'academic',
             'Conseil en transformation digital' => 'digital-transformation',
             'Conseil aux opérateurs mobile' => 'mobile-advices',
-            'Programmes digital' => 'digital-programs',
+            'Programmes d\'entrepreneuriat digital' => 'digital-programs',
             'Coaching d\'entreprises' => 'coaching',
         ];
 
