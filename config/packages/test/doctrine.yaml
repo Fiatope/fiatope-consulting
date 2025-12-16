@@ -1,0 +1,3 @@
+doctrine:
+    dbal:
+        dbname_suffix: '_test%env(default::DATABASE_URL_SUFFIX)%'

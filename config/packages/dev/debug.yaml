@@ -1,0 +1,6 @@
+# See the DebugBundle documentation for more information
+# https://symfony.com/doc/current/bundles/DebugBundle/index.html
+debug:
+    # Forwards VarDumper Data clones to a centralized server allowing to inspect dumps on a web interface
+    # See the "server:dump" command to start a new server
+    dump_destination: tcp://%env(VAR_DUMPER_SERVER)%
